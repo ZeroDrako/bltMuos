@@ -51,17 +51,17 @@ function HeaderUI()
     local xPos = 0
     local yPos = 0
 
-    love.graphics.setColor(0.31, 0.31, 0.118)
+    love.graphics.setColor(love.math.colorFromBytes(34,204,119),1)
     love.graphics.rectangle("fill", xPos, yPos, 640, 30)
 
-    love.graphics.setColor(0.98, 0.98, 0.749)
+    love.graphics.setColor(love.math.colorFromBytes(34,204,119),1)
     love.graphics.setFont(fontBig)
     love.graphics.draw(ic_bluetooth, 640 - 25, yPos + 4)
     love.graphics.print("Bluetooth Settings", xPos + 250, yPos + 2)
 
     Now = os.date('*t')
     local formatted_time = string.format("%02d:%02d", tonumber(Now.hour), tonumber(Now.min))
-    love.graphics.setColor(0.98, 0.98, 0.749, 0.7)
+    love.graphics.setColor(love.math.colorFromBytes(34,204,119),1)
     love.graphics.print(formatted_time, xPos + 10, yPos + 2)
 
     love.graphics.setFont(fontSmall)
